@@ -14,7 +14,7 @@ const DummyMessages: Message[] = [
     {
         sender: "Jussi Kauppinen",
         content: loremIpsum,
-        datetime: new Date(Date.now() - 2 * 60000),
+        datetime: new Date(Date.now() - 1 * 60000),
         media: [],
         platform: "Facebook"
     },
@@ -22,9 +22,17 @@ const DummyMessages: Message[] = [
     {
         sender: "Helena RKH",
         content: loremIpsum,
-        datetime: new Date(Date.now() - 12345),
+        datetime: new Date(Date.now() - 12 * 123456),
         media: [],
         platform: "LinkedIn"
+    },
+
+    {
+      sender: "Toni Taipalus",
+      content: loremIpsum,
+      datetime: new Date(Date.now() - 12344321),
+      media: [],
+      platform: "Twitter"
     }
 ]
 
