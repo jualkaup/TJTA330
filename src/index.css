@@ -1,0 +1,27 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #e6ecf0;
+}
+
+#appRoot {
+    height: 100%;
+}
+
+.feedContainer {
+    height: 100%;
+}
+
+.rootContainer {
+    height: 100%;
+}
+
+.feed {
+    background-color: white;
+    height: 100%;
+}
+
+.feedRow {
+    height: 100%;
+    margin: 0;
+}

@@ -1,0 +1,27 @@
+{
+  "name": "ismo-frontend",
+  "version": "1.0.0",
+  "description": "ismo-frontend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel ./src/index.html",
+    "build": "npm run type-check && parcel build ./src/index.html --public-url '/'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/react-bootstrap": "^0.32.17",
+    "parcel-bundler": "^1.12.3",
+    "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@types/node": "^11.13.0",
+    "@types/react": "^16.8.12",
+    "@types/react-dom": "^16.8.3",
+    "tslint": "^5.15.0",
+    "typescript": "^3.4.1"
+  }
+}
