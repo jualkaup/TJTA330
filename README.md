@@ -1,5 +1,16 @@
 # TJTA330
 
+### Käytetyt teknologiat
+## Frontend
+- TypeScript
+- React
+- react-bootstrap
+
+## Backend
+- ASP.NET Core 2.2
+- Entity Framework Core
+- SQL Server 2017
+
 ### Tarvittavat ohjelmistot
 
 1. Git
