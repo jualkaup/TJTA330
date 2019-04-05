@@ -19,7 +19,7 @@ class FeedItem extends React.Component<FeedItemProps, FeedItemState> {
       const {message} = this.props;
       const since = timeSince(message.datetime)
     return (
-      <Card>
+      <Card className="feedItem">
         <Card.Body>
           <Card.Title>{message.sender}</Card.Title>
           <Card.Subtitle className="mb-2 text-muted">

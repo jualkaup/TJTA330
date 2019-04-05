@@ -33,7 +33,55 @@ const DummyMessages: Message[] = [
       datetime: new Date(Date.now() - 12344321),
       media: [],
       platform: "Twitter"
-    }
+    },
+
+    {
+      sender: "Jussi Kauppinen",
+      content: loremIpsum,
+      datetime: new Date(Date.now() - 1 * 60000),
+      media: [],
+      platform: "Facebook"
+  },
+  
+  {
+      sender: "Helena RKH",
+      content: loremIpsum,
+      datetime: new Date(Date.now() - 12 * 123456),
+      media: [],
+      platform: "LinkedIn"
+  },
+
+  {
+    sender: "Toni Taipalus",
+    content: loremIpsum,
+    datetime: new Date(Date.now() - 12344321),
+    media: [],
+    platform: "Twitter"
+  },
+
+  {
+    sender: "Jussi Kauppinen",
+    content: loremIpsum,
+    datetime: new Date(Date.now() - 1 * 60000),
+    media: [],
+    platform: "Facebook"
+},
+
+{
+    sender: "Helena RKH",
+    content: loremIpsum,
+    datetime: new Date(Date.now() - 12 * 123456),
+    media: [],
+    platform: "LinkedIn"
+},
+
+{
+  sender: "Toni Taipalus",
+  content: loremIpsum,
+  datetime: new Date(Date.now() - 12344321),
+  media: [],
+  platform: "Twitter"
+}
 ]
 
 class Feed extends React.Component<FeedProps, FeedState> {
