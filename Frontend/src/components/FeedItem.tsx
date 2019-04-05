@@ -26,8 +26,8 @@ class FeedItem extends React.Component<FeedItemProps, FeedItemState> {
             { since } - {message.platform}
           </Card.Subtitle>
           <Card.Text>{message.content}</Card.Text>
-          <Card.Link href="#">Tykkää</Card.Link>
-          <Card.Link href="#">Kommentoi</Card.Link>
+          <Card.Link href="#">Like</Card.Link>
+          <Card.Link href="#">Comment</Card.Link>
         </Card.Body>
       </Card>
     );
