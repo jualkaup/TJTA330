@@ -20,8 +20,8 @@ class IsmoNavbar extends React.Component<IsmoNavbarProps, IsmoNavbarState> {
       <Navbar fixed="top" bg="dark" variant="dark" expand="lg">
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
+          <Nav>
+            <Nav.Link  href="#home">Home</Nav.Link>
             <Nav.Link href="#notifications">Notifications</Nav.Link>
             <Nav.Link href="#messages">Messages</Nav.Link>
             <Navbar.Brand>

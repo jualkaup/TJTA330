@@ -84,7 +84,12 @@ const DummyMessages: Message[] = [
 }
 ]
 
+const ad = require("../assets/MISE.png");
+
 class Feed extends React.Component<FeedProps, FeedState> {
+
+  
+
   render() {
     return (
       <div className="feedContainer">
@@ -96,7 +101,7 @@ class Feed extends React.Component<FeedProps, FeedState> {
             { DummyMessages.map(msg => <FeedItem message={msg}/>) }
           </Col>
           <Col sm >
-          
+            <img src={ad} alt="MISE"></img>
           </Col>
         </Row>
       </div>

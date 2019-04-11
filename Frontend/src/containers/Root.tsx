@@ -1,6 +1,7 @@
 import * as React from "react";
 import IsmoNavbar from "../components/IsmoNavbar";
 import Feed from "./Feed";
+import PublishField from "../components/PublishField";
 
 // Nämä voidaan jättää tyhjäksi
 interface RootProps {}
@@ -15,6 +16,7 @@ class Root extends React.Component<RootProps, RootState> {
     return (
       <div className="rootContainer">
         <IsmoNavbar />
+        <PublishField />
         <Feed />
       </div>
     );
