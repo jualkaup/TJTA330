@@ -101,7 +101,7 @@ class Feed extends React.Component<FeedProps, FeedState> {
             { DummyMessages.map(msg => <FeedItem message={msg}/>) }
           </Col>
           <Col sm >
-            <img src={ad} alt="MISE"></img>
+            <img id="ad" src={ad} alt="MISE"></img>
           </Col>
         </Row>
       </div>
