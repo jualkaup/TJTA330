@@ -1,13 +1,27 @@
 export interface Message {
-    sender: string,
-    datetime: Date,
+    id: number,
+    sender: User,
+    date: Date,
     content: string,
-    platform: "Facebook" | "LinkedIn" | "Twitter" | "Instagram",
-    media: Media[]
+    platform: Platform
+    likeAmount: number
 }
 
-export interface Media {
-    imageUrl: string,
-    imageTitle: string,
-    imageCaption: string
+export interface User {
+    id: number,
+    name: string,
+    email: string,
+    dateOfBirth: Date
+}
+
+export enum Platform {
+    FACEBOOK, TWITTER, LINKEDIN, INSTAGRAM, ISMO
+}
+
+export const PlatformName = {
+    0: "Facebook",
+    1: "Twitter",
+    2: "LinkedIn",
+    3: "Instagram",
+    4: "ISMO"
 }
