@@ -27,14 +27,14 @@ class FeedItem extends React.Component<FeedItemProps, FeedItemState> {
   }
 
   likeMessage = () => {
-    fetch(`https://localhost:44346/api/Messages/LikeMessage/${this.props.message.id}`).then(() => {
+    fetch(`https://ismobackend.azurewebsites.net/api/Messages/LikeMessage/${this.props.message.id}`).then(() => {
       this.props.updateFunction();
       this.getLikeState();
     })
   }
 
   getLikeState = () => {
-    fetch(`https://localhost:44346/api/Messages/LikeState/3/${this.props.message.id}`).then(r => r.text().then(t => this.setState({likeState: t == "true" ? true : false})));
+    fetch(`https://ismobackend.azurewebsites.net/api/Messages/LikeState/3/${this.props.message.id}`).then(r => r.text().then(t => this.setState({likeState: t == "true" ? true : false})));
   }
   
   render() {

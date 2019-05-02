@@ -24,7 +24,7 @@ class Root extends React.Component<RootProps, RootState> {
   }
 
   fetchMessages = () => {
-    fetch("https://localhost:44346/api/Messages").then(r => r.json().then(f => this.setState({messages: f})))
+    fetch("https://ismobackend.azurewebsites.net/api/Messages").then(r => r.json().then(f => this.setState({messages: f})))
   }
 
   render() {

@@ -38,7 +38,7 @@ class PublishField extends React.Component<PublishFieldProps, PublishFieldState>
             }
         };
 
-        fetch("https://localhost:44346/api/Messages", {method: "POST", body: JSON.stringify(message), headers: {"Content-Type": "application/json"}}).then(() => this.props.fetchMessages())
+        fetch("https://ismobackend.azurewebsites.net/api/Messages", {method: "POST", body: JSON.stringify(message), headers: {"Content-Type": "application/json"}}).then(() => this.props.fetchMessages())
     }
 
     render() {
