@@ -5,39 +5,23 @@ import FeedItem from "../components/FeedItem";
 import '../styles/feed.css';
 import { Message } from "../interfaces/message";
 
-interface FeedProps {}
-interface FeedState {}
+interface FeedProps {
+  messages: Message[]
+  fetchMessages: () => void;
+}
+interface FeedState {
 
-const loremIpsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,";
+}
 
-const DummyMessages: Message[] = [
-    {
-        sender: "Jussi Kauppinen",
-        content: loremIpsum,
-        datetime: new Date(Date.now() - 1 * 60000),
-        media: [],
-        platform: "Facebook"
-    },
-    
-    {
-        sender: "Helena RKH",
-        content: loremIpsum,
-        datetime: new Date(Date.now() - 12 * 123456),
-        media: [],
-        platform: "LinkedIn"
-    },
-
-    {
-      sender: "Toni Taipalus",
-      content: loremIpsum,
-      datetime: new Date(Date.now() - 12344321),
-      media: [],
-      platform: "Twitter"
-    }
-]
+const ad = require("../assets/MISE.png");
 
 class Feed extends React.Component<FeedProps, FeedState> {
+
   render() {
+    const {messages} = this.props;
+    console.log(messages);
+    const sortedMessages = messages.sort((a,b) => new Date(a.date).getTime() < new Date(b.date).getTime() ? 1 : -1 );
+
     return (
       <div className="feedContainer">
         <Row className="feedRow">
@@ -45,10 +29,12 @@ class Feed extends React.Component<FeedProps, FeedState> {
             
           </Col>
           <Col sm={5}  className="feed">
-            { DummyMessages.map(msg => <FeedItem message={msg}/>) }
+            {
+              sortedMessages.map(msg => <FeedItem updateFunction={this.props.fetchMessages} message={msg}/>)
+            }
           </Col>
           <Col sm >
-          
+            <img id="ad" src={ad} alt="MISE"></img>
           </Col>
         </Row>
       </div>
